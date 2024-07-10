@@ -24,7 +24,7 @@ abstract class BaseActivity(var customLoader: Boolean) : ComponentActivity(),
     @Composable
     override fun showProgressBar() {
         if (!customLoader) {
-            LoaderUtil.showLoader()
+            LoaderUtil.ShowLoader()
         }
     }
 

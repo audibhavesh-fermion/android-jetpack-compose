@@ -107,7 +107,20 @@ fun Project.configureLibraryExtension() {
         lint {
             checkReleaseBuilds = true
         }
+        buildFeatures {
+            compose = true
+        }
+        composeOptions {
+            kotlinCompilerExtensionVersion = "1.5.1"
+        }
+        packaging {
+            resources {
+                excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            }
+        }
+
     }
+
     dependencies {
     }
     apply(from = "$rootDir/dependencies.gradle")
@@ -119,7 +132,11 @@ fun Project.configureAppExtension() {
         compileSdk = rootProject.extra["baseCompileSDK"] as Int
         defaultConfig {
             targetSdk = rootProject.extra["baseTargetSDK"] as Int
+            minSdk = rootProject.extra["baseMinSDK"] as Int
             testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+            versionCode = rootProject.extra["versionCode"] as Int
+            versionName = rootProject.extra["versionName"].toString()
+            vectorDrawables.useSupportLibrary = true
         }
         lint {
             checkReleaseBuilds = true
@@ -139,6 +156,18 @@ fun Project.configureAppExtension() {
                     "release" -> (this as com.android.build.gradle.internal.api.BaseVariantOutputImpl).outputFileName =
                         "$apkFileName.apk"
                 }
+            }
+        }
+
+        buildFeatures {
+            compose = true
+        }
+        composeOptions {
+            kotlinCompilerExtensionVersion = "1.5.1"
+        }
+        packaging {
+            resources {
+                excludes += "/META-INF/{AL2.0,LGPL2.1}"
             }
         }
     }

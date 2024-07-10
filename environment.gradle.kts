@@ -22,7 +22,7 @@ var environment: ENVIRONMENT by extra { ENVIRONMENT.DEV }
 //app android sdk version settings
 var baseCompileSDK by extra { 34 }
 var baseTargetSDK by extra { 34 }
-val baseMinSDK by extra { 26 }
+val baseMinSDK by extra { 28 }
 
 // default app version
 var versionName by extra { "1.0.0" }
@@ -67,10 +67,10 @@ when (environment) {
 
     }
 
-    else -> {
-        baseUrl = ""
-        versionName = "1.0.0"
-        versionCode = 1
-        sslPinnerSha256 = ""
-    }
+//    else -> {
+//        baseUrl = ""
+//        versionName = "1.0.0"
+//        versionCode = 1
+//        sslPinnerSha256 = ""
+//    }
 }

@@ -35,7 +35,6 @@ import coil.decode.GifDecoder
 import coil.decode.ImageDecoderDecoder
 import coil.request.ImageRequest
 import com.fermion.android.base.constants.AppThemeType
-import com.fermion.android.base.helper.BaseProgressBarProvider
 import com.fermion.android.base.view.BaseActivity
 import com.fermion.android.base.view.navigation.Navigation
 import com.fermion.android.base.view.theme.AppTheme
@@ -45,8 +44,7 @@ import com.theoctacoder.cats_facts.theme.appLightScheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : BaseActivity(customLoader = true), BaseProgressBarProvider {
-
+class MainActivity : BaseActivity() {
 
     @SuppressLint("SourceLockedOrientationActivity")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -150,14 +148,6 @@ class MainActivity : BaseActivity(customLoader = true), BaseProgressBarProvider 
                 )
 
             }
-//                val painter = rememberAsyncImagePainter(R.raw.main)
-//                AsyncImage(
-//                    model = LocalContext.current.resources.openRawResource(R.raw.main),
-//                    contentDescription = null,
-//                )
-//            }
-
-
         }
     }
 }
