@@ -39,6 +39,8 @@ import com.fermion.android.base.view.BaseActivity
 import com.fermion.android.base.view.navigation.Navigation
 import com.fermion.android.base.view.theme.AppTheme
 import com.fermion.android.base.view.theme.ThemeViewModel
+import com.theoctacoder.cats_facts.routes.HomeScreenRoute
+import com.theoctacoder.cats_facts.routes.routes
 import com.theoctacoder.cats_facts.theme.appDarkScheme
 import com.theoctacoder.cats_facts.theme.appLightScheme
 import dagger.hilt.android.AndroidEntryPoint

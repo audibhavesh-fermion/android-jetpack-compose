@@ -39,8 +39,8 @@ import coil.decode.ImageDecoderDecoder
 import coil.request.ImageRequest
 import com.fermion.android.base.view.BaseView
 import com.fermion.android.base.view.BaseViewModel
-import com.theoctacoder.cats_facts.FactsScreenRoute
-import com.theoctacoder.cats_facts.HomeScreenRoute
+import com.theoctacoder.cats_facts.routes.FactsScreenRoute
+import com.theoctacoder.cats_facts.routes.HomeScreenRoute
 import com.theoctacoder.cats_facts.R
 
 class HomeScreen : BaseView<BaseViewModel>() {

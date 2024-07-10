@@ -1,4 +1,4 @@
-package com.theoctacoder.cats_facts
+package com.theoctacoder.cats_facts.routes
 
 import com.fermion.android.base.view.navigation.Screen
 import com.theoctacoder.cats_facts.ui.facts.FactsScreen
